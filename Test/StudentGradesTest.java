@@ -4,6 +4,7 @@ import org.junit.Test;
 
 public class StudentGradesTest {
     StudentGrades obj ;
+   int []a=new int[]{1,2,3,4,5};
     @Before
     public void setUp() {
         obj = new StudentGrades();
@@ -23,12 +24,15 @@ public class StudentGradesTest {
     @Test
     public void testMaximum()
     {
-
+        double expected =12;
+        double actual = maximum(a);
+       // assertEquals(12,obj.Maximum(a));
+        assertEqual(expected,actual);
     }
 
     @Test
     public void testMinimum()
     {
-
+        assert.equals(12,obj.Maximum(a));
     }
 }

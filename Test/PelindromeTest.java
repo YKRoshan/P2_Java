@@ -5,8 +5,8 @@ import org.junit.Test;
 public class PelindromeTest {
     Pelindrome obj;
     @Before
-    public void setUp()
-    {
+    public void setUp() {
+
         obj = new Pelindrome();
     }
 
