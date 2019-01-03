@@ -1,5 +1,9 @@
+import static org.junit.Assert.*;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 public class FactorialTest {
-    Factorial objj;
+    Factorial obj;
     @Before
     public void setUp() throws Exception {
 
@@ -11,20 +15,24 @@ public class FactorialTest {
         obj = null;
     }
 
-    @Test    public void factorial_sucess_1() {
+    @Test
+    public void factorial_sucess_1() {
         long expected = 720;
         long actual = obj.factorial(6);
         assertEquals(expected, actual);
     }
+
+    @Test
     public void factorial_sucess_2() {
         long expected = 479001600;
         long actual = obj.factorial(12);
         assertEquals(expected, actual);
     }
+
     @Test
     public void factorial_sucess_3() {
-        long expected = 323454657768;
+        long expected = 0;
         long actual = obj.factorial(22);
-        assertNotEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 }

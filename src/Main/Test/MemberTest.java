@@ -1,3 +1,4 @@
+import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -22,7 +23,7 @@ public class MemberTest {
     {
         obj.setName("Rahul");
         String actual = obj.getName();
-        String expected = "Rahul"
+        String expected = "Rahul";
         assertEquals(expected,actual);
     }
 
@@ -32,16 +33,16 @@ public class MemberTest {
         obj.setAge(22);
         int actual = obj.getAge();
         int expected = 22;
-        assertEquals(expected,actual);
+        assertEquals(expected,actual,0);
     }
 
     @Test
     public void testSalary()
     {
         obj.setSalary(10000);
-        int actual = getSalary();
-        int expected = 10000;
-        assertEquals(expected,actual);
+        double actual = obj.getSalary();
+        double expected = 10000;
+        assertEquals(expected,actual,0);
     }
 
 }
