@@ -3,23 +3,23 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 public class StudentGradesTest {
-    StudentGrades obj ;
+    StudentGrades grades ;
    int [] arr = {66,72,83,64,75};
     @Before
     public void setUp() {
-        obj = new StudentGrades();
+        grades = new StudentGrades();
     }
 
     @After
     public void tearDown() {
-        obj = null;
+        grades = null;
     }
 
     @Test
     public void testMaximum()
     {
         int expected =83;
-        int actual = obj.maximum(arr,5);
+        int actual = grades.maximum(arr,5);
         assertEquals(expected,actual);
     }
 
@@ -27,7 +27,7 @@ public class StudentGradesTest {
     public void testMinimum()
     {
         int expected =64;
-        int actual = obj.minimum(arr,5);
+        int actual = grades.minimum(arr,5);
         assertEquals(expected,actual);
     }
 
@@ -35,7 +35,7 @@ public class StudentGradesTest {
     public void testAverage()
     {
         double expected =72;
-        double actual = obj.average(arr,5);
+        double actual = grades.average(arr,5);
         assertEquals(expected,actual,0);
     }
 }

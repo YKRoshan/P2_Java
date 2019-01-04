@@ -4,23 +4,23 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class PalindromeTest {
-    Palindrome obj;
+    Palindrome palindrome;
     @Before
     public void setUp() {
 
-        obj = new Palindrome();
+        palindrome = new Palindrome();
     }
 
     @After
     public void tearDown()
     {
-        obj = null;
+        palindrome = null;
     }
 
     @Test
     public void reverseSuccess_1()
     {
-       int actual =  obj.reverse(121);
+       int actual =  palindrome.reverse(121);
        int expected = 121;
         assertEquals(expected,actual);
     }
@@ -28,7 +28,7 @@ public class PalindromeTest {
     @Test
     public void reverseSuccess_2()
     {
-        int actual =  obj.reverse(235542);
+        int actual =  palindrome.reverse(235542);
         int expected = 245532;
         assertEquals(expected,actual);
     }
@@ -36,14 +36,14 @@ public class PalindromeTest {
     @Test
     public void palindromeSuccess()
     {
-        boolean actual =  obj.palindrome(121);
+        boolean actual =  palindrome.palindrome(121);
         boolean expected = true;
         assertEquals(expected,actual);
     }
     @Test
     public void palindromeFail()
     {
-        boolean actual =  obj.palindrome(235542);
+        boolean actual =  palindrome.palindrome(235542);
         boolean expected = false;
         assertEquals(expected,actual);
     }

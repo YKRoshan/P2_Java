@@ -5,22 +5,22 @@ import org.junit.Test;
 
 public class CheckPowerOfFourTest {
 
-    CheckPowerOfFour obj ;
+    CheckPowerOfFour checkPowerOfFour ;
     @Before
     public void setUp() {
-        obj = new CheckPowerOfFour();
+        checkPowerOfFour = new CheckPowerOfFour();
     }
 
     @After
     public void tearDown() {
 
-        obj = null;
+        checkPowerOfFour = null;
     }
 
     @Test
     public void testSuccess()
     {
-        boolean actual =  obj.checkPowerOfFour(64);
+        boolean actual =  checkPowerOfFour.checkPowerOfFour(64);
         boolean expected = true;
         assertEquals(expected,actual);
     }
@@ -28,7 +28,7 @@ public class CheckPowerOfFourTest {
     @Test
     public void testFail()
     {
-        boolean actual =  obj.checkPowerOfFour(122);
+        boolean actual =  checkPowerOfFour.checkPowerOfFour(122);
         boolean expected = false;
         assertEquals(expected,actual);
     }

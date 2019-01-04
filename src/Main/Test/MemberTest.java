@@ -5,24 +5,24 @@ import org.junit.Test;
 
 
 public class MemberTest {
-    Member obj ;
+    Member member ;
     @Before
     public void setUp() {
 
-        obj = new Member();
+        member = new Member();
     }
 
     @After
     public void tearDown() {
 
-        obj = null;
+        member = null;
     }
 
     @Test
     public void testName()
     {
-        obj.setName("Rahul");
-        String actual = obj.getName();
+        member.setName("Rahul");
+        String actual = member.getName();
         String expected = "Rahul";
         assertEquals(expected,actual);
     }
@@ -30,8 +30,8 @@ public class MemberTest {
     @Test
     public void testAge()
     {
-        obj.setAge(22);
-        int actual = obj.getAge();
+        member.setAge(22);
+        int actual = member.getAge();
         int expected = 22;
         assertEquals(expected,actual,0);
     }
@@ -39,8 +39,8 @@ public class MemberTest {
     @Test
     public void testSalary()
     {
-        obj.setSalary(10000);
-        double actual = obj.getSalary();
+        member.setSalary(10000);
+        double actual = member.getSalary();
         double expected = 10000;
         assertEquals(expected,actual,0);
     }
